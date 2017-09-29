@@ -11,7 +11,7 @@ options {
   /* PARSER_INCLUDES=""; */
 
   FORCE_LA_CHECK=false;
-  DEBUG_PARSER = true;
+  DEBUG_PARSER = false;
   TRACK_TOKENS = true;
 }
 

@@ -89,7 +89,7 @@ static bool compile_file(compile_context &ctx, const char *file)
 	char code[64 * 1024];
 	int codelen;
 	
-	//加载源代码
+	//load source file code
 	FILE *fp = fopen(file, "rb");
 	if(!fp)
 	{
@@ -100,7 +100,7 @@ static bool compile_file(compile_context &ctx, const char *file)
 	code[codelen] = 0;
 	fclose(fp);
 	
-	//解析语法树
+	//analysis grammar
 	CharStream cs(code, (int)codelen, 1, 1);
 	OrbTokenManager tm(&cs);
 	OrbTokenManagerErrorHandler *eh1 = new OrbTokenManagerErrorHandler("");
@@ -141,7 +141,6 @@ int main(int argc, char *argv[])
 	compile(ctx);
 	
     
-    //将语法树dump成XML文件
 //    if (true)
 //    {
 //        FILE *fp = fopen("/Users/mervin/temp/orb.ast.xml", "w");
@@ -152,5 +151,8 @@ int main(int argc, char *argv[])
 //        }
 //    }
     
+	printf("Press any key to exit...");
+	getchar();
+
 	return 0;
 }

@@ -903,16 +903,12 @@ protected:
   virtual void  parseError();
 private:
   int  indent;	// trace indentation
-  bool trace = true; // trace enabled if true
+  bool trace = false; // trace enabled if true
 
 public:
   bool trace_enabled();
   void enable_tracing();
   void disable_tracing();
-  void trace_call(const char *s);
-  void trace_return(const char *s);
-  void trace_token(Token *t, const char *where);
-  void trace_scan(Token *t1, int t2);
   void jj_rescan_token();
   void jj_save(int index, int xla);
 

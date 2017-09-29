@@ -2,3 +2,6 @@
 .DS_Store
 build_mac/objs
 build_mac/out
+/build_windows/VS15/x86-Debug
+/build_windows/VS15/.vs
+/build_windows/VS15/*.user
