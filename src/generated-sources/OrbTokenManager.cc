@@ -12,8 +12,8 @@ static const unsigned long long jjbitVec3[] = {
    0x0ULL, 0x0ULL, 0xfffe03fffffe0000ULL, 0x3ffULL
 };
 static const int jjnextStates[] = {
-   39, 40, 45, 46, 25, 26, 28, 15, 17, 12, 13, 18, 19, 27, 29, 43, 
-   44, 47, 48, 
+   37, 38, 39, 44, 45, 23, 24, 26, 13, 15, 10, 11, 16, 17, 25, 27, 
+   42, 43, 46, 47, 
 };
 static JJChar jjstrLiteralChars_0[] = {0};
 static JJChar jjstrLiteralChars_1[] = {0};
@@ -304,21 +304,21 @@ static const unsigned long long jjtoSpecial[] = {
    switch (pos)
    {
       case 0:
-         if ((active0 & 0x8200000000000000ULL) != 0L)
-            return 10;
-         if ((active0 & 0xa0ULL) != 0L || (active1 & 0x100000100ULL) != 0L)
-            return 2;
          if ((active0 & 0x1ffffffff000ULL) != 0L)
          {
             jjmatchedKind = 52;
-            return 37;
+            return 35;
          }
+         if ((active0 & 0xa0ULL) != 0L || (active1 & 0x100000100ULL) != 0L)
+            return 2;
+         if ((active0 & 0x8200000000000000ULL) != 0L)
+            return 8;
          return -1;
       case 1:
          if ((active0 & 0x80ULL) != 0L)
             return 0;
          if ((active0 & 0x4c080000ULL) != 0L)
-            return 37;
+            return 35;
          if ((active0 & 0x1fffb3f7f000ULL) != 0L)
          {
             if (jjmatchedPos != 1)
@@ -326,17 +326,17 @@ static const unsigned long long jjtoSpecial[] = {
                jjmatchedKind = 52;
                jjmatchedPos = 1;
             }
-            return 37;
+            return 35;
          }
          return -1;
       case 2:
          if ((active0 & 0x21402000ULL) != 0L)
-            return 37;
+            return 35;
          if ((active0 & 0x1fff92b7d000ULL) != 0L)
          {
             jjmatchedKind = 52;
             jjmatchedPos = 2;
-            return 37;
+            return 35;
          }
          return -1;
       case 3:
@@ -344,50 +344,50 @@ static const unsigned long long jjtoSpecial[] = {
          {
             jjmatchedKind = 52;
             jjmatchedPos = 3;
-            return 37;
+            return 35;
          }
          if ((active0 & 0x4e000308000ULL) != 0L)
-            return 37;
+            return 35;
          return -1;
       case 4:
          if ((active0 & 0x111f82060000ULL) != 0L)
          {
             jjmatchedKind = 52;
             jjmatchedPos = 4;
-            return 37;
+            return 35;
          }
          if ((active0 & 0xa0010815000ULL) != 0L)
-            return 37;
+            return 35;
          return -1;
       case 5:
          if ((active0 & 0x11200000000ULL) != 0L)
-            return 37;
+            return 35;
          if ((active0 & 0x100d82060000ULL) != 0L)
          {
             jjmatchedKind = 52;
             jjmatchedPos = 5;
-            return 37;
+            return 35;
          }
          return -1;
       case 6:
+         if ((active0 & 0x80040000ULL) != 0L)
+            return 35;
          if ((active0 & 0x100d02020000ULL) != 0L)
          {
             jjmatchedKind = 52;
             jjmatchedPos = 6;
-            return 37;
+            return 35;
          }
-         if ((active0 & 0x80040000ULL) != 0L)
-            return 37;
          return -1;
       case 7:
          if ((active0 & 0x100800000000ULL) != 0L)
          {
             jjmatchedKind = 52;
             jjmatchedPos = 7;
-            return 37;
+            return 35;
          }
          if ((active0 & 0x502020000ULL) != 0L)
-            return 37;
+            return 35;
          return -1;
       default :
          return -1;
@@ -578,7 +578,7 @@ int  OrbTokenManager::jjStartNfa_0(int pos, unsigned long long active0, unsigned
          return jjMoveStringLiteralDfa2_0(active0, 0x1c00040000ULL, active1, 0L);
       case 102:
          if ((active0 & 0x4000000ULL) != 0L)
-            return jjStartNfaWithStates_0(1, 26, 37);
+            return jjStartNfaWithStates_0(1, 26, 35);
          break;
       case 104:
          return jjMoveStringLiteralDfa2_0(active0, 0xc6000000000ULL, active1, 0L);
@@ -590,15 +590,15 @@ int  OrbTokenManager::jjStartNfa_0(int pos, unsigned long long active0, unsigned
          return jjMoveStringLiteralDfa2_0(active0, 0x402000ULL, active1, 0L);
       case 111:
          if ((active0 & 0x80000ULL) != 0L)
-            return jjStartNfaWithStates_0(1, 19, 37);
+            return jjStartNfaWithStates_0(1, 19, 35);
          return jjMoveStringLiteralDfa2_0(active0, 0x11030000ULL, active1, 0L);
       case 114:
          if ((active0 & 0x40000000ULL) != 0L)
-            return jjStartNfaWithStates_0(1, 30, 37);
+            return jjStartNfaWithStates_0(1, 30, 35);
          return jjMoveStringLiteralDfa2_0(active0, 0x108100004000ULL, active1, 0L);
       case 115:
          if ((active0 & 0x8000000ULL) != 0L)
-            return jjStartNfaWithStates_0(1, 27, 37);
+            return jjStartNfaWithStates_0(1, 27, 35);
          return jjMoveStringLiteralDfa2_0(active0, 0x20000000000ULL, active1, 0L);
       case 117:
          return jjMoveStringLiteralDfa2_0(active0, 0x202000000ULL, active1, 0L);
@@ -640,9 +640,9 @@ int  OrbTokenManager::jjStartNfa_0(int pos, unsigned long long active0, unsigned
          return jjMoveStringLiteralDfa3_0(active0, 0x90000000ULL, active1, 0L);
       case 100:
          if ((active0 & 0x2000ULL) != 0L)
-            return jjStartNfaWithStates_0(2, 13, 37);
+            return jjStartNfaWithStates_0(2, 13, 35);
          else if ((active0 & 0x400000ULL) != 0L)
-            return jjStartNfaWithStates_0(2, 22, 37);
+            return jjStartNfaWithStates_0(2, 22, 35);
          break;
       case 101:
          return jjMoveStringLiteralDfa3_0(active0, 0x42000004000ULL, active1, 0L);
@@ -652,7 +652,7 @@ int  OrbTokenManager::jjStartNfa_0(int pos, unsigned long long active0, unsigned
          return jjMoveStringLiteralDfa3_0(active0, 0x1a4000101000ULL, active1, 0L);
       case 108:
          if ((active0 & 0x20000000ULL) != 0L)
-            return jjStartNfaWithStates_0(2, 29, 37);
+            return jjStartNfaWithStates_0(2, 29, 35);
          return jjMoveStringLiteralDfa3_0(active0, 0x800000ULL, active1, 0L);
       case 110:
          return jjMoveStringLiteralDfa3_0(active0, 0x2030000ULL, active1, 0L);
@@ -662,7 +662,7 @@ int  OrbTokenManager::jjStartNfa_0(int pos, unsigned long long active0, unsigned
          return jjMoveStringLiteralDfa3_0(active0, 0x10000000000ULL, active1, 0L);
       case 114:
          if ((active0 & 0x1000000ULL) != 0L)
-            return jjStartNfaWithStates_0(2, 24, 37);
+            return jjStartNfaWithStates_0(2, 24, 35);
          break;
       case 115:
          return jjMoveStringLiteralDfa3_0(active0, 0x208000ULL, active1, 0L);
@@ -694,15 +694,15 @@ int  OrbTokenManager::jjStartNfa_0(int pos, unsigned long long active0, unsigned
          return jjMoveStringLiteralDfa4_0(active0, 0xc00000000ULL);
       case 101:
          if ((active0 & 0x8000ULL) != 0L)
-            return jjStartNfaWithStates_0(3, 15, 37);
+            return jjStartNfaWithStates_0(3, 15, 35);
          else if ((active0 & 0x200000ULL) != 0L)
-            return jjStartNfaWithStates_0(3, 21, 37);
+            return jjStartNfaWithStates_0(3, 21, 35);
          else if ((active0 & 0x8000000000ULL) != 0L)
-            return jjStartNfaWithStates_0(3, 39, 37);
+            return jjStartNfaWithStates_0(3, 39, 35);
          return jjMoveStringLiteralDfa4_0(active0, 0x10000000000ULL);
       case 102:
          if ((active0 & 0x100000ULL) != 0L)
-            return jjStartNfaWithStates_0(3, 20, 37);
+            return jjStartNfaWithStates_0(3, 20, 35);
          break;
       case 107:
          return jjMoveStringLiteralDfa4_0(active0, 0x80000000ULL);
@@ -710,15 +710,15 @@ int  OrbTokenManager::jjStartNfa_0(int pos, unsigned long long active0, unsigned
          return jjMoveStringLiteralDfa4_0(active0, 0x80200000000ULL);
       case 110:
          if ((active0 & 0x2000000000ULL) != 0L)
-            return jjStartNfaWithStates_0(3, 37, 37);
+            return jjStartNfaWithStates_0(3, 37, 35);
          else if ((active0 & 0x40000000000ULL) != 0L)
-            return jjStartNfaWithStates_0(3, 42, 37);
+            return jjStartNfaWithStates_0(3, 42, 35);
          return jjMoveStringLiteralDfa4_0(active0, 0x20000000000ULL);
       case 112:
          return jjMoveStringLiteralDfa4_0(active0, 0x100000000ULL);
       case 115:
          if ((active0 & 0x4000000000ULL) != 0L)
-            return jjStartNfaWithStates_0(3, 38, 37);
+            return jjStartNfaWithStates_0(3, 38, 35);
          return jjMoveStringLiteralDfa4_0(active0, 0x810000ULL);
       case 116:
          return jjMoveStringLiteralDfa4_0(active0, 0x100000020000ULL);
@@ -744,23 +744,23 @@ int  OrbTokenManager::jjStartNfa_0(int pos, unsigned long long active0, unsigned
          return jjMoveStringLiteralDfa5_0(active0, 0x80000000ULL);
       case 101:
          if ((active0 & 0x800000ULL) != 0L)
-            return jjStartNfaWithStates_0(4, 23, 37);
+            return jjStartNfaWithStates_0(4, 23, 35);
          else if ((active0 & 0x80000000000ULL) != 0L)
-            return jjStartNfaWithStates_0(4, 43, 37);
+            return jjStartNfaWithStates_0(4, 43, 35);
          return jjMoveStringLiteralDfa5_0(active0, 0x100100000000ULL);
       case 103:
          if ((active0 & 0x20000000000ULL) != 0L)
-            return jjStartNfaWithStates_0(4, 41, 37);
+            return jjStartNfaWithStates_0(4, 41, 35);
          break;
       case 105:
          return jjMoveStringLiteralDfa5_0(active0, 0x200020000ULL);
       case 107:
          if ((active0 & 0x4000ULL) != 0L)
-            return jjStartNfaWithStates_0(4, 14, 37);
+            return jjStartNfaWithStates_0(4, 14, 35);
          break;
       case 108:
          if ((active0 & 0x10000000ULL) != 0L)
-            return jjStartNfaWithStates_0(4, 28, 37);
+            return jjStartNfaWithStates_0(4, 28, 35);
          break;
       case 111:
          return jjMoveStringLiteralDfa5_0(active0, 0x10400000000ULL);
@@ -768,11 +768,11 @@ int  OrbTokenManager::jjStartNfa_0(int pos, unsigned long long active0, unsigned
          return jjMoveStringLiteralDfa5_0(active0, 0x1000000000ULL);
       case 115:
          if ((active0 & 0x1000ULL) != 0L)
-            return jjStartNfaWithStates_0(4, 12, 37);
+            return jjStartNfaWithStates_0(4, 12, 35);
          break;
       case 116:
          if ((active0 & 0x10000ULL) != 0L)
-            return jjStartNfaWithStates_0(4, 16, 37);
+            return jjStartNfaWithStates_0(4, 16, 35);
          return jjMoveStringLiteralDfa5_0(active0, 0x2000000ULL);
       case 117:
          return jjMoveStringLiteralDfa5_0(active0, 0x40000ULL);
@@ -796,11 +796,11 @@ int  OrbTokenManager::jjStartNfa_0(int pos, unsigned long long active0, unsigned
    {
       case 99:
          if ((active0 & 0x200000000ULL) != 0L)
-            return jjStartNfaWithStates_0(5, 33, 37);
+            return jjStartNfaWithStates_0(5, 33, 35);
          break;
       case 102:
          if ((active0 & 0x10000000000ULL) != 0L)
-            return jjStartNfaWithStates_0(5, 40, 37);
+            return jjStartNfaWithStates_0(5, 40, 35);
          break;
       case 103:
          return jjMoveStringLiteralDfa6_0(active0, 0x80000000ULL);
@@ -810,7 +810,7 @@ int  OrbTokenManager::jjStartNfa_0(int pos, unsigned long long active0, unsigned
          return jjMoveStringLiteralDfa6_0(active0, 0x40000ULL);
       case 110:
          if ((active0 & 0x1000000000ULL) != 0L)
-            return jjStartNfaWithStates_0(5, 36, 37);
+            return jjStartNfaWithStates_0(5, 36, 35);
          return jjMoveStringLiteralDfa6_0(active0, 0x400020000ULL);
       case 111:
          return jjMoveStringLiteralDfa6_0(active0, 0x100000000000ULL);
@@ -834,7 +834,7 @@ int  OrbTokenManager::jjStartNfa_0(int pos, unsigned long long active0, unsigned
    {
       case 101:
          if ((active0 & 0x80000000ULL) != 0L)
-            return jjStartNfaWithStates_0(6, 31, 37);
+            return jjStartNfaWithStates_0(6, 31, 35);
          break;
       case 105:
          return jjMoveStringLiteralDfa7_0(active0, 0x800000000ULL);
@@ -846,7 +846,7 @@ int  OrbTokenManager::jjStartNfa_0(int pos, unsigned long long active0, unsigned
          return jjMoveStringLiteralDfa7_0(active0, 0x2000000ULL);
       case 116:
          if ((active0 & 0x40000ULL) != 0L)
-            return jjStartNfaWithStates_0(6, 18, 37);
+            return jjStartNfaWithStates_0(6, 18, 35);
          return jjMoveStringLiteralDfa7_0(active0, 0x100000000ULL);
       case 117:
          return jjMoveStringLiteralDfa7_0(active0, 0x20000ULL);
@@ -868,21 +868,21 @@ int  OrbTokenManager::jjStartNfa_0(int pos, unsigned long long active0, unsigned
    {
       case 101:
          if ((active0 & 0x20000ULL) != 0L)
-            return jjStartNfaWithStates_0(7, 17, 37);
+            return jjStartNfaWithStates_0(7, 17, 35);
          break;
       case 108:
          return jjMoveStringLiteralDfa8_0(active0, 0x100000000000ULL);
       case 110:
          if ((active0 & 0x2000000ULL) != 0L)
-            return jjStartNfaWithStates_0(7, 25, 37);
+            return jjStartNfaWithStates_0(7, 25, 35);
          break;
       case 116:
          return jjMoveStringLiteralDfa8_0(active0, 0x800000000ULL);
       case 121:
          if ((active0 & 0x100000000ULL) != 0L)
-            return jjStartNfaWithStates_0(7, 32, 37);
+            return jjStartNfaWithStates_0(7, 32, 35);
          else if ((active0 & 0x400000000ULL) != 0L)
-            return jjStartNfaWithStates_0(7, 34, 37);
+            return jjStartNfaWithStates_0(7, 34, 35);
          break;
       default :
          break;
@@ -902,11 +902,11 @@ int  OrbTokenManager::jjStartNfa_0(int pos, unsigned long long active0, unsigned
    {
       case 101:
          if ((active0 & 0x800000000ULL) != 0L)
-            return jjStartNfaWithStates_0(8, 35, 37);
+            return jjStartNfaWithStates_0(8, 35, 35);
          break;
       case 121:
          if ((active0 & 0x100000000000ULL) != 0L)
-            return jjStartNfaWithStates_0(8, 44, 37);
+            return jjStartNfaWithStates_0(8, 44, 35);
          break;
       default :
          break;
@@ -924,7 +924,7 @@ int OrbTokenManager::jjStartNfaWithStates_0(int pos, int kind, int state){
 
 int OrbTokenManager::jjMoveNfa_0(int startState, int curPos){
    int startsAt = 0;
-   jjnewStateCnt = 49;
+   jjnewStateCnt = 48;
    int i = 1;
    jjstateSet[0] = startState;
    int kind = 0x7fffffff;
@@ -942,23 +942,21 @@ int OrbTokenManager::jjMoveNfa_0(int startState, int curPos){
             {
                case 3:
                   if ((0x3ff000000000000ULL & l) != 0L)
-                     { jjCheckNAddStates(0, 3); }
-                  else if (curChar == 34)
-                     { jjCheckNAddStates(4, 6); }
-                  else if (curChar == 39)
-                     { jjAddStates(7, 8); }
-                  else if (curChar == 46)
-                     { jjCheckNAdd(10); }
-                  else if (curChar == 47)
-                     jjstateSet[jjnewStateCnt++] = 2;
-                  if ((0x3fe000000000000ULL & l) != 0L)
                   {
                      if (kind > 45)
                         kind = 45;
-                     { jjCheckNAdd(5); }
+                     { jjCheckNAddStates(0, 4); }
                   }
-                  else if (curChar == 48)
-                     jjstateSet[jjnewStateCnt++] = 7;
+                  else if (curChar == 34)
+                     { jjCheckNAddStates(5, 7); }
+                  else if (curChar == 39)
+                     { jjAddStates(8, 9); }
+                  else if (curChar == 46)
+                     { jjCheckNAdd(8); }
+                  else if (curChar == 47)
+                     jjstateSet[jjnewStateCnt++] = 2;
+                  if (curChar == 48)
+                     jjstateSet[jjnewStateCnt++] = 5;
                   break;
                case 0:
                   if (curChar == 42)
@@ -973,67 +971,61 @@ int OrbTokenManager::jjMoveNfa_0(int startState, int curPos){
                      jjstateSet[jjnewStateCnt++] = 0;
                   break;
                case 4:
-                  if ((0x3fe000000000000ULL & l) == 0L)
-                     break;
-                  if (kind > 45)
-                     kind = 45;
-                  { jjCheckNAdd(5); }
+                  if (curChar == 48)
+                     jjstateSet[jjnewStateCnt++] = 5;
                   break;
-               case 5:
+               case 6:
                   if ((0x3ff000000000000ULL & l) == 0L)
                      break;
                   if (kind > 45)
                      kind = 45;
-                  { jjCheckNAdd(5); }
+                  jjstateSet[jjnewStateCnt++] = 6;
                   break;
-               case 6:
-                  if (curChar == 48)
-                     jjstateSet[jjnewStateCnt++] = 7;
+               case 7:
+                  if (curChar == 46)
+                     { jjCheckNAdd(8); }
                   break;
                case 8:
                   if ((0x3ff000000000000ULL & l) == 0L)
                      break;
-                  if (kind > 45)
-                     kind = 45;
-                  jjstateSet[jjnewStateCnt++] = 8;
-                  break;
-               case 9:
-                  if (curChar == 46)
-                     { jjCheckNAdd(10); }
+                  if (kind > 48)
+                     kind = 48;
+                  { jjCheckNAddTwoStates(8, 9); }
                   break;
                case 10:
+                  if ((0x280000000000ULL & l) != 0L)
+                     { jjCheckNAdd(11); }
+                  break;
+               case 11:
                   if ((0x3ff000000000000ULL & l) == 0L)
                      break;
                   if (kind > 48)
                      kind = 48;
-                  { jjCheckNAddTwoStates(10, 11); }
+                  { jjCheckNAdd(11); }
                   break;
                case 12:
-                  if ((0x280000000000ULL & l) != 0L)
-                     { jjCheckNAdd(13); }
+                  if (curChar == 39)
+                     { jjAddStates(8, 9); }
                   break;
                case 13:
-                  if ((0x3ff000000000000ULL & l) == 0L)
-                     break;
-                  if (kind > 48)
-                     kind = 48;
-                  { jjCheckNAdd(13); }
+                  if ((0xffffff7fffffdbffULL & l) != 0L)
+                     { jjCheckNAdd(14); }
                   break;
                case 14:
-                  if (curChar == 39)
-                     { jjAddStates(7, 8); }
-                  break;
-               case 15:
-                  if ((0xffffff7fffffdbffULL & l) != 0L)
-                     { jjCheckNAdd(16); }
-                  break;
-               case 16:
                   if (curChar == 39 && kind > 50)
                      kind = 50;
                   break;
-               case 18:
+               case 16:
                   if ((0x8400000000ULL & l) != 0L)
-                     { jjCheckNAdd(16); }
+                     { jjCheckNAdd(14); }
+                  break;
+               case 18:
+                  if ((0x3ff000000000000ULL & l) != 0L)
+                     jjstateSet[jjnewStateCnt++] = 19;
+                  break;
+               case 19:
+                  if ((0x3ff000000000000ULL & l) != 0L)
+                     jjstateSet[jjnewStateCnt++] = 20;
                   break;
                case 20:
                   if ((0x3ff000000000000ULL & l) != 0L)
@@ -1041,31 +1033,31 @@ int OrbTokenManager::jjMoveNfa_0(int startState, int curPos){
                   break;
                case 21:
                   if ((0x3ff000000000000ULL & l) != 0L)
-                     jjstateSet[jjnewStateCnt++] = 22;
+                     { jjCheckNAdd(14); }
                   break;
                case 22:
-                  if ((0x3ff000000000000ULL & l) != 0L)
-                     jjstateSet[jjnewStateCnt++] = 23;
+                  if (curChar == 34)
+                     { jjCheckNAddStates(5, 7); }
                   break;
                case 23:
-                  if ((0x3ff000000000000ULL & l) != 0L)
-                     { jjCheckNAdd(16); }
-                  break;
-               case 24:
-                  if (curChar == 34)
-                     { jjCheckNAddStates(4, 6); }
+                  if ((0xfffffffbffffdbffULL & l) != 0L)
+                     { jjCheckNAddStates(5, 7); }
                   break;
                case 25:
-                  if ((0xfffffffbffffdbffULL & l) != 0L)
-                     { jjCheckNAddStates(4, 6); }
-                  break;
-               case 27:
                   if ((0x8400000000ULL & l) != 0L)
-                     { jjCheckNAddStates(4, 6); }
+                     { jjCheckNAddStates(5, 7); }
                   break;
-               case 28:
+               case 26:
                   if (curChar == 34 && kind > 51)
                      kind = 51;
+                  break;
+               case 28:
+                  if ((0x3ff000000000000ULL & l) != 0L)
+                     jjstateSet[jjnewStateCnt++] = 29;
+                  break;
+               case 29:
+                  if ((0x3ff000000000000ULL & l) != 0L)
+                     jjstateSet[jjnewStateCnt++] = 30;
                   break;
                case 30:
                   if ((0x3ff000000000000ULL & l) != 0L)
@@ -1073,15 +1065,14 @@ int OrbTokenManager::jjMoveNfa_0(int startState, int curPos){
                   break;
                case 31:
                   if ((0x3ff000000000000ULL & l) != 0L)
-                     jjstateSet[jjnewStateCnt++] = 32;
-                  break;
-               case 32:
-                  if ((0x3ff000000000000ULL & l) != 0L)
-                     jjstateSet[jjnewStateCnt++] = 33;
+                     { jjCheckNAddStates(5, 7); }
                   break;
                case 33:
-                  if ((0x3ff000000000000ULL & l) != 0L)
-                     { jjCheckNAddStates(4, 6); }
+                  if ((0x3ff000000000000ULL & l) == 0L)
+                     break;
+                  if (kind > 52)
+                     kind = 52;
+                  jjstateSet[jjnewStateCnt++] = 33;
                   break;
                case 35:
                   if ((0x3ff000000000000ULL & l) == 0L)
@@ -1090,60 +1081,63 @@ int OrbTokenManager::jjMoveNfa_0(int startState, int curPos){
                      kind = 52;
                   jjstateSet[jjnewStateCnt++] = 35;
                   break;
+               case 36:
+                  if ((0x3ff000000000000ULL & l) == 0L)
+                     break;
+                  if (kind > 45)
+                     kind = 45;
+                  { jjCheckNAddStates(0, 4); }
+                  break;
                case 37:
                   if ((0x3ff000000000000ULL & l) == 0L)
                      break;
-                  if (kind > 52)
-                     kind = 52;
-                  jjstateSet[jjnewStateCnt++] = 37;
+                  if (kind > 45)
+                     kind = 45;
+                  { jjCheckNAdd(37); }
                   break;
                case 38:
                   if ((0x3ff000000000000ULL & l) != 0L)
-                     { jjCheckNAddStates(0, 3); }
+                     { jjCheckNAddTwoStates(38, 39); }
                   break;
                case 39:
-                  if ((0x3ff000000000000ULL & l) != 0L)
-                     { jjCheckNAddTwoStates(39, 40); }
-                  break;
-               case 40:
                   if (curChar != 46)
                      break;
                   if (kind > 48)
                      kind = 48;
-                  { jjCheckNAddTwoStates(41, 42); }
+                  { jjCheckNAddTwoStates(40, 41); }
                   break;
-               case 41:
+               case 40:
                   if ((0x3ff000000000000ULL & l) == 0L)
                      break;
                   if (kind > 48)
                      kind = 48;
-                  { jjCheckNAddTwoStates(41, 42); }
+                  { jjCheckNAddTwoStates(40, 41); }
+                  break;
+               case 42:
+                  if ((0x280000000000ULL & l) != 0L)
+                     { jjCheckNAdd(43); }
                   break;
                case 43:
-                  if ((0x280000000000ULL & l) != 0L)
-                     { jjCheckNAdd(44); }
+                  if ((0x3ff000000000000ULL & l) == 0L)
+                     break;
+                  if (kind > 48)
+                     kind = 48;
+                  { jjCheckNAdd(43); }
                   break;
                case 44:
-                  if ((0x3ff000000000000ULL & l) == 0L)
-                     break;
-                  if (kind > 48)
-                     kind = 48;
-                  { jjCheckNAdd(44); }
-                  break;
-               case 45:
                   if ((0x3ff000000000000ULL & l) != 0L)
-                     { jjCheckNAddTwoStates(45, 46); }
+                     { jjCheckNAddTwoStates(44, 45); }
+                  break;
+               case 46:
+                  if ((0x280000000000ULL & l) != 0L)
+                     { jjCheckNAdd(47); }
                   break;
                case 47:
-                  if ((0x280000000000ULL & l) != 0L)
-                     { jjCheckNAdd(48); }
-                  break;
-               case 48:
                   if ((0x3ff000000000000ULL & l) == 0L)
                      break;
                   if (kind > 48)
                      kind = 48;
-                  { jjCheckNAdd(48); }
+                  { jjCheckNAdd(47); }
                   break;
                default : break;
             }
@@ -1158,46 +1152,54 @@ int OrbTokenManager::jjMoveNfa_0(int startState, int curPos){
             switch(jjstateSet[--i])
             {
                case 3:
-               case 37:
+               case 35:
                   if ((0x7fffffe87fffffeULL & l) == 0L)
                      break;
                   if (kind > 52)
                      kind = 52;
-                  { jjCheckNAdd(37); }
+                  { jjCheckNAdd(35); }
                   break;
                case 1:
                   if (kind > 6)
                      kind = 6;
                   break;
-               case 7:
+               case 5:
                   if ((0x100000001000000ULL & l) != 0L)
-                     { jjCheckNAdd(8); }
+                     { jjCheckNAdd(6); }
                   break;
-               case 8:
+               case 6:
                   if ((0x7e0000007eULL & l) == 0L)
                      break;
                   if (kind > 45)
                      kind = 45;
-                  { jjCheckNAdd(8); }
+                  { jjCheckNAdd(6); }
                   break;
-               case 11:
+               case 9:
                   if ((0x2000000020ULL & l) != 0L)
-                     { jjAddStates(9, 10); }
+                     { jjAddStates(10, 11); }
+                  break;
+               case 13:
+                  if ((0xffffffffefffffffULL & l) != 0L)
+                     { jjCheckNAdd(14); }
                   break;
                case 15:
-                  if ((0xffffffffefffffffULL & l) != 0L)
-                     { jjCheckNAdd(16); }
+                  if (curChar == 92)
+                     { jjAddStates(12, 13); }
+                  break;
+               case 16:
+                  if ((0x14404410000000ULL & l) != 0L)
+                     { jjCheckNAdd(14); }
                   break;
                case 17:
-                  if (curChar == 92)
-                     { jjAddStates(11, 12); }
+                  if (curChar == 117)
+                     jjstateSet[jjnewStateCnt++] = 18;
                   break;
                case 18:
-                  if ((0x14404410000000ULL & l) != 0L)
-                     { jjCheckNAdd(16); }
+                  if ((0x7e0000007eULL & l) != 0L)
+                     jjstateSet[jjnewStateCnt++] = 19;
                   break;
                case 19:
-                  if (curChar == 117)
+                  if ((0x7e0000007eULL & l) != 0L)
                      jjstateSet[jjnewStateCnt++] = 20;
                   break;
                case 20:
@@ -1206,30 +1208,30 @@ int OrbTokenManager::jjMoveNfa_0(int startState, int curPos){
                   break;
                case 21:
                   if ((0x7e0000007eULL & l) != 0L)
-                     jjstateSet[jjnewStateCnt++] = 22;
-                  break;
-               case 22:
-                  if ((0x7e0000007eULL & l) != 0L)
-                     jjstateSet[jjnewStateCnt++] = 23;
+                     { jjCheckNAdd(14); }
                   break;
                case 23:
-                  if ((0x7e0000007eULL & l) != 0L)
-                     { jjCheckNAdd(16); }
+                  if ((0xffffffffefffffffULL & l) != 0L)
+                     { jjCheckNAddStates(5, 7); }
+                  break;
+               case 24:
+                  if (curChar == 92)
+                     { jjAddStates(14, 15); }
                   break;
                case 25:
-                  if ((0xffffffffefffffffULL & l) != 0L)
-                     { jjCheckNAddStates(4, 6); }
-                  break;
-               case 26:
-                  if (curChar == 92)
-                     { jjAddStates(13, 14); }
+                  if ((0x14404410000000ULL & l) != 0L)
+                     { jjCheckNAddStates(5, 7); }
                   break;
                case 27:
-                  if ((0x14404410000000ULL & l) != 0L)
-                     { jjCheckNAddStates(4, 6); }
+                  if (curChar == 117)
+                     jjstateSet[jjnewStateCnt++] = 28;
+                  break;
+               case 28:
+                  if ((0x7e0000007eULL & l) != 0L)
+                     jjstateSet[jjnewStateCnt++] = 29;
                   break;
                case 29:
-                  if (curChar == 117)
+                  if ((0x7e0000007eULL & l) != 0L)
                      jjstateSet[jjnewStateCnt++] = 30;
                   break;
                case 30:
@@ -1238,23 +1240,15 @@ int OrbTokenManager::jjMoveNfa_0(int startState, int curPos){
                   break;
                case 31:
                   if ((0x7e0000007eULL & l) != 0L)
-                     jjstateSet[jjnewStateCnt++] = 32;
+                     { jjCheckNAddStates(5, 7); }
                   break;
-               case 32:
-                  if ((0x7e0000007eULL & l) != 0L)
-                     jjstateSet[jjnewStateCnt++] = 33;
-                  break;
-               case 33:
-                  if ((0x7e0000007eULL & l) != 0L)
-                     { jjCheckNAddStates(4, 6); }
-                  break;
-               case 42:
+               case 41:
                   if ((0x2000000020ULL & l) != 0L)
-                     { jjAddStates(15, 16); }
+                     { jjAddStates(16, 17); }
                   break;
-               case 46:
+               case 45:
                   if ((0x2000000020ULL & l) != 0L)
-                     { jjAddStates(17, 18); }
+                     { jjAddStates(18, 19); }
                   break;
                default : break;
             }
@@ -1276,19 +1270,19 @@ int OrbTokenManager::jjMoveNfa_0(int startState, int curPos){
                      break;
                   if (kind > 52)
                      kind = 52;
-                  jjstateSet[jjnewStateCnt++] = 35;
+                  jjstateSet[jjnewStateCnt++] = 33;
                   break;
                case 1:
                   if (jjCanMove_0(hiByte, i1, i2, l1, l2) && kind > 6)
                      kind = 6;
                   break;
-               case 15:
+               case 13:
                   if (jjCanMove_0(hiByte, i1, i2, l1, l2))
-                     jjstateSet[jjnewStateCnt++] = 16;
+                     jjstateSet[jjnewStateCnt++] = 14;
                   break;
-               case 25:
+               case 23:
                   if (jjCanMove_0(hiByte, i1, i2, l1, l2))
-                     { jjAddStates(4, 6); }
+                     { jjAddStates(5, 7); }
                   break;
                default : if (i1 == 0 || l1 == 0 || i2 == 0 ||  l2 == 0) break; else break;
             }
@@ -1301,7 +1295,7 @@ int OrbTokenManager::jjMoveNfa_0(int startState, int curPos){
          kind = 0x7fffffff;
       }
       ++curPos;
-      if ((i = jjnewStateCnt), (jjnewStateCnt = startsAt), (i == (startsAt = 49 - startsAt)))
+      if ((i = jjnewStateCnt), (jjnewStateCnt = startsAt), (i == (startsAt = 48 - startsAt)))
          return curPos;
       if (input_stream->endOfInput()) { return curPos; }
       curChar = input_stream->readChar();
@@ -1648,7 +1642,7 @@ void  OrbTokenManager::MoreLexicalActions(){
       case 6 : {
          image.append(input_stream->GetSuffix(jjimageLen));
          jjimageLen = 0;
-                   input_stream.backup(1);
+                   input_stream->backup(1);
          break;
        }
       default :
@@ -1670,7 +1664,7 @@ void  OrbTokenManager::MoreLexicalActions(){
   void OrbTokenManager::ReInitRounds() {
     int i;
     jjround = 0x80000001;
-    for (i = 49; i-- > 0;)
+    for (i = 48; i-- > 0;)
       jjrounds[i] = 0x80000000;
   }
 
