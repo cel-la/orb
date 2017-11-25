@@ -19,10 +19,21 @@ namespace orb
 #pragma pack(push, 8)
         struct Key
         {
-            Type        type;
-            int64       lv_or_len;
-            const uchar *str;
-            uchar       data[16];
+            Type    type;
+            union
+            {
+                struct
+                {
+                    int64   iv2;
+                    int64   iv1;
+                };
+                struct
+                {
+                    uint16      len;
+                    const uchar *s;
+                    uchar       ss[16];
+                };
+            };
         };
 
         struct Value
@@ -30,13 +41,17 @@ namespace orb
             Type            type;
             union
             {
-                int64       lv_or_len;
+                int64       iv;
                 double      fv;
-            };
-            union
-            {
-                const uchar *str;
-                const uint8 *data;
+                struct
+                {
+                    uint32  len;
+                    union
+                    {
+                        const uchar *s;
+                        const uint8 *d;
+                    };
+                };
             };
         };
 #pragma pack(pop)
@@ -53,17 +68,18 @@ public:
 
     static uint64 get_nextsize(uint64 size, uint64 *magic);
 
-    void init(uint64 capacity, std::function<void*(void*, uint32)> alloc, std::function<void(void*)> dealloc);
+    bool init(uint64 capacity, std::function<void*(void*, uint32)> alloc, std::function<void(void*)> dealloc);
     bool exists(Key &key);
     bool get(Key &key, Value &value);
-    void put(Key &key, Value &value);
+    bool put(Key &key, Value &value);
     void *end() const;
 
 private:
     HashMap(const HashMap&) = delete;
     HashMap& operator=(const HashMap&) = delete;
 
-    Bucket* find_bucket(Key &key, bool *exists);
+    uint64 find_bucket(Key &key, Bucket *bucket, bool *exists);
+    uint64 hash_key(Key &key);
 
 private:
     uint64  magic_ = 0;

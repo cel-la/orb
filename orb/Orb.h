@@ -35,6 +35,7 @@ typedef unsigned short      uchar;
 #define _UINT64_MAX         ((uint64)0xffffffffffffffffULL)
 
 #include <functional>  
+#include <vector>
 
 namespace orb
 {
@@ -59,6 +60,9 @@ namespace orb
         else
             return (T*)(x + align_of - (x % align_of));
     }
+
+    const uchar* utf8to16(const char *s, uint len, std::vector<uchar> &dst);
+    const char* utf16to8(const uchar *s, uint len, std::vector<char> &dst);
 
     class Error;
     class ThreadLocal;

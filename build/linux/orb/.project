@@ -36,6 +36,11 @@
 			<locationURI>PARENT-3-PROJECT_LOC/orb/Orb.h</locationURI>
 		</link>
 		<link>
+			<name>String.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-3-PROJECT_LOC/orb/String.cpp</locationURI>
+		</link>
+		<link>
 			<name>ThreadLocal.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-3-PROJECT_LOC/orb/ThreadLocal.cpp</locationURI>
