@@ -3,6 +3,7 @@
 	<name>cavern_service</name>
 	<comment></comment>
 	<projects>
+		<project>orb</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

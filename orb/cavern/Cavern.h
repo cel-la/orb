@@ -16,6 +16,7 @@ namespace orb
             TYPE_BINARY     = 0x05,
         };
 
+#pragma pack(push, 8)
         struct Key
         {
             Type        type;
@@ -38,6 +39,7 @@ namespace orb
                 const uint8 *data;
             };
         };
+#pragma pack(pop)
 
 		class HashMap;
 		class Cavern;
@@ -47,10 +49,11 @@ namespace orb
 class orb::cavern::HashMap
 {
 public:
-    HashMap();
-    ~HashMap();
+    struct Bucket;
 
-    void init(uint64 total_bytes, void *alloc_data, std::function<void*(void*, uint32)> alloc, std::function<void(void*)> dealloc);
+    static uint64 get_nextsize(uint64 size, uint64 *magic);
+
+    void init(uint64 capacity, std::function<void*(void*, uint32)> alloc, std::function<void(void*)> dealloc);
     bool exists(Key &key);
     bool get(Key &key, Value &value);
     void put(Key &key, Value &value);
@@ -59,6 +62,18 @@ public:
 private:
     HashMap(const HashMap&) = delete;
     HashMap& operator=(const HashMap&) = delete;
+
+    Bucket* find_bucket(Key &key, bool *exists);
+
+private:
+    uint64  magic_ = 0;
+    uint64  capacity_ = 0;
+    uint64  count_ = 0;
+
+    std::function<void*(void*, uint32)> alloc_ = nullptr;
+    std::function<void(void*)> dealloc_ = nullptr;
+
+    Bucket  *buckets_ = nullptr;
 };
 
 class orb::cavern::Cavern

@@ -20,6 +20,7 @@ typedef char                int8;
 typedef short               int16;
 typedef int	                int32;
 typedef long long           int64;
+typedef unsigned int        uint;
 typedef unsigned char       uint8;
 typedef unsigned short      uint16;
 typedef unsigned int        uint32;
@@ -38,10 +39,26 @@ typedef unsigned short      uchar;
 namespace orb
 {
     template<typename T>
-    T max(T x, T y) { return x >= y ? x : y; }
+    T max(T x, T y)
+    {
+        return x >= y ? x : y;
+    }
 
     template<typename T>
-    T min(T x, T y) { return x <= y ? x : y; }
+    T min(T x, T y)
+    {
+        return x <= y ? x : y;
+    }
+
+    template<typename T>
+    T* address_align(void *p, uint align_of)
+    {
+        uint64 x = (uint64)p;
+        if(x % align_of == 0)
+            return (T*)p;
+        else
+            return (T*)(x + align_of - (x % align_of));
+    }
 
     class Error;
     class ThreadLocal;
@@ -66,7 +83,7 @@ private:
     static void default_exit(void *v);
 
 private:
-    std::function<void(void*)> dtor_;
+    std::function<void(void*)> dtor_ = nullptr;
     uint32 key_;
 };
 

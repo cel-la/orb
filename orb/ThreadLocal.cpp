@@ -15,7 +15,6 @@ struct ThreadLocal::Data
 };
 
 ThreadLocal::ThreadLocal()
-    :dtor_(nullptr)
 {
 #if _ORB_OS_LINUX
     pthread_key_create(&this->key_, default_exit);
